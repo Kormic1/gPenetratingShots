@@ -1,5 +1,9 @@
 // This file is included separately for each engine version
 
+#define PrintConsole(msg) Union::String::Format(msg).StdPrintLine()
+
+#include "oCAIArrowHook.hpp"
+
 namespace GOTHIC_NAMESPACE
 {
 	// NOTE! Callbacks won't be called by default, you need to uncomment
