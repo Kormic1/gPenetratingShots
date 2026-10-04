@@ -25,7 +25,7 @@ Moving on to the formula - there were a few good candidates for probability func
 probability = \frac{1}{1 + exp(-0.012 * (-0.5 * ((dexterity - 300) - 2 * protection)))}
 ```
 
-Since formulae aren't good at visualisations, here's an image of the probability function shown above:
+Since formulae aren't good for visualisation purposes, here's an image of the probability function shown above:
 
 ![3D plot of a probability function](/presentation/dex_prot_probability.png)
 
