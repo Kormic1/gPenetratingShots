@@ -1,8 +1,6 @@
 // This file is included separately for each engine version
 
-#define PrintConsole(msg) Union::String::Format(msg).StdPrintLine()
-
-#include "oCAIArrowHook.hpp"
+#include "Settings.hpp"
 
 namespace GOTHIC_NAMESPACE
 {
@@ -16,7 +14,7 @@ namespace GOTHIC_NAMESPACE
 
 	void Game_Init()
 	{
-
+		ReadSettingsFromIni();
 	}
 
 	void Game_Exit()
@@ -61,7 +59,7 @@ namespace GOTHIC_NAMESPACE
 
 	void LoadEnd()
 	{
-
+		
 	}
 
 	void Game_LoadBegin_NewGame()
@@ -121,7 +119,7 @@ namespace GOTHIC_NAMESPACE
 
 	void Game_ApplySettings()
 	{
-
+		ReadSettingsFromIni();
 	}
 
 	/*void __fastcall WinMain_EntryPoint(Union::Registers& reg);
@@ -131,13 +129,13 @@ namespace GOTHIC_NAMESPACE
 		Game_EntryPoint();
 	}*/
 
-	/*void __fastcall oCGame_Init(oCGame* self, void* vtable);
+	void __fastcall oCGame_Init(oCGame* self, void* vtable);
 	auto Hook_oCGame_Init = Union::CreateHook(SIGNATURE_OF(&oCGame::Init), &oCGame_Init, Union::HookType::Hook_Detours);
 	void __fastcall oCGame_Init(oCGame* self, void* vtable)
 	{
 		Hook_oCGame_Init(self, vtable);
 		Game_Init();
-	}*/
+	}
 
 	/*void __fastcall CGameManager_Done(CGameManager* self, void* vtable);
 	auto Hook_CGameManager_Done = Union::CreateHook(SIGNATURE_OF(&CGameManager::Done), &CGameManager_Done, Union::HookType::Hook_Detours);
@@ -180,23 +178,23 @@ namespace GOTHIC_NAMESPACE
 		Game_SaveEnd();
 	}*/
 
-	/*void __fastcall oCGame_LoadGame(oCGame* self, void* vtable, int slot, const zSTRING& levelPath);
+	void __fastcall oCGame_LoadGame(oCGame* self, void* vtable, int slot, const zSTRING& levelPath);
 	auto Hook_oCGame_LoadGame = Union::CreateHook(SIGNATURE_OF(&oCGame::LoadGame), &oCGame_LoadGame, Union::HookType::Hook_Detours);
 	void __fastcall oCGame_LoadGame(oCGame* self, void* vtable, int slot, const zSTRING& levelPath)
 	{
 		Game_LoadBegin_NewGame();
 		Hook_oCGame_LoadGame(self, vtable, slot, levelPath);
 		Game_LoadEnd_NewGame();
-	}*/
+	}
 
-	/*void __fastcall oCGame_LoadSaveGame(oCGame* self, void* vtable, int slot, zBOOL loadGlobals);
+	void __fastcall oCGame_LoadSaveGame(oCGame* self, void* vtable, int slot, zBOOL loadGlobals);
 	auto Hook_oCGame_LoadSaveGame = Union::CreateHook(SIGNATURE_OF(&oCGame::LoadSavegame), &oCGame_LoadSaveGame, Union::HookType::Hook_Detours);
 	void __fastcall oCGame_LoadSaveGame(oCGame* self, void* vtable, int slot, zBOOL loadGlobals)
 	{
 		Game_LoadBegin_SaveGame();
 		Hook_oCGame_LoadSaveGame(self, vtable, slot, loadGlobals);
 		Game_LoadEnd_SaveGame();
-	}*/
+	}
 
 	/*void __fastcall oCGame_ChangeLevel(oCGame* self, void* vtable, const zSTRING& levelpath, const zSTRING& startpoint);
 	auto Hook_oCGame_ChangeLevel = Union::CreateHook(SIGNATURE_OF(&oCGame::ChangeLevel), &oCGame_ChangeLevel, Union::HookType::Hook_Detours);
@@ -252,11 +250,11 @@ namespace GOTHIC_NAMESPACE
 		Game_DefineExternals();
 	}*/
 
-	/*void __fastcall CGameManager_ApplySomeSettings(CGameManager* self, void* vtable);
+	void __fastcall CGameManager_ApplySomeSettings(CGameManager* self, void* vtable);
 	auto Hook_CGameManager_ApplySomeSettings = Union::CreateHook(SIGNATURE_OF(&CGameManager::ApplySomeSettings), &CGameManager_ApplySomeSettings, Union::HookType::Hook_Detours);
 	void __fastcall CGameManager_ApplySomeSettings(CGameManager* self, void* vtable)
 	{
 		Hook_CGameManager_ApplySomeSettings(self, vtable);
 		Game_ApplySettings();
-	}*/
+	}
 }

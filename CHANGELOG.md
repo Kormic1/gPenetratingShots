@@ -1,1 +1,2 @@
 - Implemented basic logic of the plugin
+- Added configuration via Gothic.ini file

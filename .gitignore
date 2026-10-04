@@ -19,3 +19,7 @@
 # CMake user config
 
 CMakeUserConfigPresets.json
+
+# Presentation related files
+/presentation/*
+!/presentation/dex_prot_probability.png
