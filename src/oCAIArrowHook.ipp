@@ -1,11 +1,9 @@
 #include <random>
 #include "Settings.hpp"
 
-#define PrintConsole(msg) Union::String::Format(msg).StdPrintLine()
-
 namespace GOTHIC_NAMESPACE {
 	auto Hook_oCAIArrow_CanThisCollideWith = Union::CreateHook(
-		reinterpret_cast<void*>(zSwitch(0x0, 0x0, 0x0, 0x006A1490)),
+		reinterpret_cast<void*>(zSwitch(0x00619550, 0x0063CA10, 0x00644C10, 0x006A1490)),
 		&oCAIArrow::CanThisCollideWith_Hook,
 		Union::HookType::Hook_Detours);
 
@@ -33,9 +31,7 @@ namespace GOTHIC_NAMESPACE {
 			return false;
 		if (!vob->CastTo<oCNpc>())
 			return false;
-		float prob = ComputeProbability(arrow, vob);
-		PrintConsole(zSTRING(prob));
-		if (prob <= dist(rng))
+		if (ComputeProbability(arrow, vob) <= dist(rng))
 			return false;
 
 		return true;

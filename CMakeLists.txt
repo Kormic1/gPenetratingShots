@@ -10,7 +10,7 @@ include(generate_ipp_translation_units)
 include(configure_msvc_wine_intellisense)
 
 project(gPenetratingShots
-	DESCRIPTION "G2 NotR Union plugin adding penetrating shots based on hero's statistics."
+	DESCRIPTION "Gothic Union plugin adding penetrating shots to the game."
 	VERSION ${PROJECT_VERSION}
 )
 

@@ -1,6 +1,6 @@
 # gPenetratingShots
 
-The goal of this plugin is to make bows and crossbows even more enjoyable to use.
+gPenetratingShots is a Union plugin for Gothic 1, Gothic Sequel, Gothic 2 and Gothic NotR. The goal of this plugin is to make bows and crossbows even more enjoyable to use.
 It implements arrow shots that have a chance of penetrating enemies, potentially damaging more than one, given they stand in a single file.
 
 The chance of a penetrating shot happening is based on hero's dexterity and the projectile protection of an enemy. The higher the dexterity and the lower the projectile protection, the greater the likelihood of landing penetrating hits.
@@ -39,6 +39,6 @@ If you would like to make some changes to the formula, feel free to clone this r
 
 ## Installation
 
-All you have to do is put **gPenetratingShots.vdf** inside `/Data/Plugins` directory. You can download it from the [releases](https://github.com/Kormic1/gPenetratingShots/releases) subpage of this repository.
+All you have to do is put **gPenetratingShots.vdf** inside `/Data/Plugins` directory of your Gothic installation. You can download it from the [releases](https://github.com/Kormic1/gPenetratingShots/releases) subpage of this repository.
 
 Enjoy.
