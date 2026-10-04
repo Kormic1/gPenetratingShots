@@ -22,7 +22,7 @@ Alternatively, just boot Gothic and let it generate this section automatically t
 Moving on to the formula - there were a few good candidates for probability functions I could use, but I decided to go with a two-variable logistic function. After a bit of tweaking, this is what I came up with:
 
 ```math
-probability = \frac{1}{1 + e^(-0.012 * (-0.5 * ((dexterity - 300) - 2 * protection)))}
+probability = \frac{1}{1 + exp(-0.012 * (-0.5 * ((dexterity - 300) - 2 * protection)))}
 ```
 
 Since formulae aren't good at visualisations, here's an image of the probability function shown above:
