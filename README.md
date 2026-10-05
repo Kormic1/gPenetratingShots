@@ -5,6 +5,10 @@ It implements arrow shots that have a chance of penetrating enemies, potentially
 
 The chance of a penetrating shot happening is based on hero's dexterity and the projectile protection of an enemy. The higher the dexterity and the lower the projectile protection, the greater the likelihood of landing penetrating hits.
 
+Here you can watch a demonstration of the plugin (click the image below):
+
+[![Demonstration](http://img.youtube.com/vi/uzivTaVHrYE/0.jpg)](http://www.youtube.com/watch?v=uzivTaVHrYE "gPenetratingShots")
+
 ## Probability formula
 
 Before I move on to the probability formula, I will shortly describe two conditions that have to be met before penetrating shot can occur:
